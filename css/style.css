@@ -1,0 +1,685 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Circular", "spotify-circular", Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+nav {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  position: fixed;
+}
+
+nav .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+  height: 78px;
+}
+
+.nav-brand a svg {
+  width: 130px;
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #cccaca;
+  transition: all 0.5s;
+}
+
+.toggle span:nth-child(1) {
+  transform-origin: 0 0;
+  transform: rotate(0);
+}
+
+.toggle span:nth-child(3) {
+  transform-origin: 0 100%;
+  transform: rotate(0);
+}
+
+.toggle.active span:nth-child(1) {
+  background-color: #fff;
+  transform: rotate(45deg) translate(3px, -3px);
+}
+
+.toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.toggle.active span:nth-child(3) {
+  background-color: #fff;
+  transform: rotate(-45deg) translate(3px, 2px);
+}
+
+.nav-link {
+  box-sizing: border-box;
+}
+
+.nav-link a {
+  margin-right: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Circular", "spotify-circular", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.nav-link span {
+  margin-right: 30px;
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.nav-link a:hover {
+  color: #1ed760;
+}
+
+.nav-brand-dua {
+  display: none;
+}
+
+.banner {
+  background-color: rgb(45, 70, 185);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../img/bg-bulat.svg);
+  background-repeat: no-repeat;
+  background-size: 133%;
+  background-position: 72% 64%;
+}
+
+.isi-banner {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.isi-banner button {
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.isi-banner h1 {
+  font-size: 100px;
+  font-weight: 900;
+  color: #1ed760;
+  font-family: 'Nunito', sans-serif;
+}
+
+.isi-banner h1:nth-child(1) {
+  text-indent: -200px;
+}
+
+.isi-banner h1:nth-child(2) {
+  text-indent: 290px;
+}
+
+.isi-banner h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1ed760;
+}
+
+.isi-banner button {
+  background-color: #1ed760;
+  padding: 17px 50px;
+  border-radius: 100px;
+  font-weight: 500;
+  color: rgb(45, 70, 185);
+  border: none;
+  transition: 0.5s background-color;
+}
+
+.isi-banner button:hover {
+  background-color: #fff;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+footer .container {
+  z-index: 200;
+  box-sizing: border-box;
+  width: 1170px;
+  padding: 100px 0 0 0;
+}
+
+.footer-atas {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.list ul li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: rgb(172, 172, 172);
+}
+
+.list ul li span {
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+.list ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.list ul li a:hover {
+  color: #1ed760;
+}
+
+.logo a svg {
+  width: 120px;
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+
+.sosmed {
+  display: flex;
+}
+
+.logo-sosmed {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: rgb(41, 41, 41);
+}
+
+.logo-sosmed:nth-child(1) svg {
+  fill: white;
+  transform: scale(0.6);
+}
+
+.logo-sosmed:nth-child(2),
+.logo-sosmed:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-sosmed:nth-child(2) svg,
+.logo-sosmed:nth-child(3) svg {
+  fill: white;
+}
+
+.logo-sosmed:hover svg {
+  fill: #1ed760;
+}
+
+.negara {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.negara a {
+  color: #7e7e7e;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.negara a:hover {
+  color: #1ed760;
+}
+
+.negara div {
+  margin-left: 10px;
+  width: 30px;
+  height: 25px;
+}
+
+.negara div svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-bawah {
+  padding: 10px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bawah .copyright {
+  color: #7e7e7e;
+  font-size: 12px;
+}
+
+.footer-bawah a {
+  color: #7e7e7e;
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.footer-bawah a:hover {
+  color: #1ed760;
+}
+
+/* responsive breakpoint */
+
+@media (min-width: 1600px) {
+  nav .container {
+    max-width: 1500px;
+  }
+
+  footer .container {
+    max-width: 1500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 950px;
+  }
+
+  .nav-link {
+    display: block;
+  }
+
+  .banner::before {
+    background-size: 133%;
+    background-position: 72% 64%;
+  }
+
+  .isi-banner {
+
+    width: 80%;
+    text-align: center;
+  }
+
+  .isi-banner h1:nth-child(1),
+  .isi-banner h1:nth-child(2) {
+    font-size: 123px;
+    letter-spacing: 1.2px;
+
+  }
+
+  .isi-banner h4 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .isi-banner button {
+    width: 250px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 992px) {
+
+
+  .container {
+    max-width: 90%;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .nav-link {
+    display: block;
+  }
+
+  .banner::before {
+    background-position: 69% 41%;
+    background-size: 173%;
+  }
+
+  .isi-banner {
+    width: 80%;
+    text-align: center;
+  }
+
+  .isi-banner h1:nth-child(1),
+  .isi-banner h1:nth-child(2) {
+    font-size: 63px;
+    letter-spacing: 1.2px;
+    text-indent: 0;
+  }
+
+  .isi-banner h4 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .isi-banner button {
+    width: 250px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 786px) {
+  .container {
+    max-width: 94%;
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    position: fixed;
+    box-sizing: border-box;
+    top: 77px;
+    right: -100%;
+    opacity: 0;
+    padding: 50px 0px 0 40px;
+    text-align: left;
+    width: 50%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    transition: 1s;
+  }
+
+  .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: -390px;
+    top: -87px;
+    z-index: -10;
+    width: 180%;
+    height: 120vh;
+    background-color: rgb(0, 0, 0);
+    opacity: .6;
+  }
+
+  .nav-link.active {
+    right: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .nav-link.active a,
+  .nav-link.active span {
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+  }
+
+  .nav-link.active a:nth-child(1),
+  .nav-link.active a:nth-child(2),
+  .nav-link.active a:nth-child(3) {
+    font-size: 30px;
+  }
+
+  .nav-link.active a:nth-child(5),
+  .nav-link.active a:nth-child(6) {
+    color: rgb(217, 218, 220);
+  }
+
+  .nav-link.active a:hover {
+    color: #1ed760;
+  }
+
+  .nav-link.active span {
+    font-size: 30px;
+    transform: rotate(90deg) translateY(-15px);
+  }
+
+  .nav-brand-dua.active {
+    position: absolute;
+    bottom: 100px;
+    display: block;
+    filter: invert(1);
+    width: 85px;
+
+  }
+
+
+  .toggle {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .banner::before {
+    background-position: 65% 80%;
+    background-size: 183%;
+  }
+
+  .isi-banner {
+    width: 80%;
+    text-align: center;
+  }
+
+  .isi-banner h1:nth-child(1),
+  .isi-banner h1:nth-child(2) {
+    font-size: 43px;
+    letter-spacing: 1.2px;
+    text-indent: 0;
+  }
+
+  .isi-banner h4 {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .isi-banner button {
+    width: 180px;
+    font-size: 12px;
+    padding: 12px 20px;
+    font-weight: 500;
+  }
+
+  /* footer */
+  .footer-atas {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .logo a svg {
+    width: 83px;
+  }
+
+  .list ul li span {
+    margin-top: 50px;
+  }
+
+  .list ul li {
+    display: inline-flex;
+
+
+  }
+
+  .sosmed {
+    margin-top: 100px;
+  }
+
+  .logo-sosmed {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo-sosmed:nth-child(2) svg {
+    transform: scale(0.9);
+  }
+
+  .logo-sosmed:nth-child(3) svg {
+    transform: scale(1.1);
+  }
+
+  .footer-left {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-left a {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .footer-bawah .copyright {
+    font-size: 10px;
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  nav .container {
+    height: 50px;
+  }
+
+  .container {
+    max-width: 94%;
+  }
+
+  .nav-brand a svg {
+    width: 90px;
+  }
+
+  .toggle {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .nav-link {
+    top: 50px;
+  }
+
+  .banner::before {
+    background-position: 54% 52%;
+    background-size: 216%;
+  }
+
+  .isi-banner {
+    width: 80%;
+    text-align: center;
+  }
+
+  .isi-banner h1:nth-child(1),
+  .isi-banner h1:nth-child(2) {
+    font-size: 32px;
+    text-indent: 0;
+  }
+
+  .isi-banner h4 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .isi-banner button {
+    font-weight: 500;
+    width: 170px;
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+
+  footer .container {
+    padding: 50px 0;
+  }
+
+  .footer-atas {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .logo a svg {
+    width: 83px;
+  }
+
+  .list ul li span {
+    margin-top: 50px;
+  }
+
+  .sosmed {
+    margin-top: 100px;
+  }
+
+  .logo-sosmed {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo-sosmed:nth-child(2) svg {
+    transform: scale(0.9);
+  }
+
+  .logo-sosmed:nth-child(3) svg {
+    transform: scale(1.1);
+  }
+
+  .footer-left {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-left a {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .footer-bawah .copyright {
+    font-size: 10px;
+  }
+}
